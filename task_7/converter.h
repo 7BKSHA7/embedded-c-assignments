@@ -1,0 +1,1 @@
+void convertarray(char arr[] , int size , short int new_arr[]);

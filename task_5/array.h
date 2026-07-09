@@ -1,0 +1,1 @@
+void array_scan   (char arr[] , int size);

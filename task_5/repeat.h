@@ -1,0 +1,1 @@
+char find_repeats(char arr[], int size , char num);

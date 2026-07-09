@@ -1,0 +1,1 @@
+short int find_repeats(short int arr[], int size , short int num);

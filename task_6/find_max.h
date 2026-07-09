@@ -1,0 +1,1 @@
+char find_max(char arr[], char size);
