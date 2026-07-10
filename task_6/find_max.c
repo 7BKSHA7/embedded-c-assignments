@@ -1,7 +1,9 @@
-char find_max(char arr[], char size)
+#include "STD_TYPES.h"
+
+u8 find_max(u8 arr[], u8 size)
 {
-    char max = arr[0];
-    int counter = 0;
+    u8 max = arr[0];
+    u16 counter = 0;
     for (counter = 0; counter < size; counter++)
     {
         if (arr[counter] > max)

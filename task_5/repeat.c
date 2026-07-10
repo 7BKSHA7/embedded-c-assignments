@@ -1,8 +1,10 @@
 #include <stdio.h>
-char find_repeats(char arr[], int size , char num)
+#include "STD_TYPES.h"
+
+u16 find_repeats(u8 arr[], u16 size , u8 num)
 {
-    int counter = 0;
-    char repeats = 0;
+    u16 counter = 0;
+    u16 repeats = 0;
     for (counter = 0; counter < size; counter++)
     {
         if (arr[counter] == num)

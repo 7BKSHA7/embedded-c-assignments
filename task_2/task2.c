@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include "sort.h"
 #include "array.h"
+#include "STD_TYPES.h"
+
+#define size 10
 // sort an int array in ascending order and decedning order
 int main()
 {   
-    const char size = 10;
-    short int arr[size];
+    printf("please enter an array for it to be sorted\n\n");
+    u16 arr[size];
     array_scan(arr, size);
     printf("Array before sorting:\n");
     array_display(arr, size);
@@ -23,5 +26,3 @@ int main()
 
     return 0; 
 }
-
-//done small waringing in counter is a differnt type than expected Wchar-subcripts idk how to solve

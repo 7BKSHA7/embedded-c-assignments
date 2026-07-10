@@ -1,15 +1,17 @@
-void reverse_int (short int arr[], int size , short int reversed_arr[])
+#include "STD_TYPES.h"
+
+void reverse_int (u16 arr[], u16 size , u16 reversed_arr[])
 {
-    int counter = 0 ;
+    u16 counter = 0 ;
     for(counter = 0 ; counter < size ; counter++)
     {
         reversed_arr[counter] = arr[size - 1 - counter] ;
     }
 
 }
-void reverse_char (char arr[], int size , char reversed_arr[])
+void reverse_char (u8 arr[], u16 size , u8 reversed_arr[])
 {
-    int counter = 0 ;
+    u16 counter = 0 ;
     for(counter = 0 ; counter < size ; counter++)
     {
         reversed_arr[counter] = arr[size - 1 - counter] ;

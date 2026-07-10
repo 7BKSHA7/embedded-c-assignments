@@ -1,9 +1,12 @@
 #include <stdio.h>
-void sort_dec(short int arr[] , char size)
+#include "STD_TYPES.h"
+
+void sort_dec(u16 arr[] , u8 size)
 {
-    char counter_small = 0;
-    char counter_big = 0;
-    char temp = 0;
+    u8 counter_small = 0;
+    u8 counter_big = 0;
+    u8 temp = 0;
+
     for (counter_small = 0; counter_small < size; counter_small++)
     {
         for(counter_big = 0; counter_big < size - 1 - counter_small; counter_big++)
@@ -17,12 +20,13 @@ void sort_dec(short int arr[] , char size)
         }
     }
 }
-
-void sort_asc(short int arr[] , char size)
+    
+void sort_asc(u16 arr[] , u8 size)
 {
-    char counter_small = 0;
-    char counter_big = 0;
-    char temp = 0;
+    u8 counter_small = 0;
+    u8 counter_big = 0;
+    u8 temp = 0;
+    
     for (counter_small = 0; counter_small < size - 1; counter_small++)
     {
         for(counter_big = 0; counter_big < size - 1 - counter_small; counter_big++)

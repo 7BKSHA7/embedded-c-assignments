@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include "STD_TYPES.h"
 
-void sort(short int arr[] , char size)
+void sort(u16 arr[] , u8 size)
 {
-    char counter_small = 0;
-    char counter_big = 0;
-    char temp = 0;
+    u8 counter_small = 0;
+    u8 counter_big = 0;
+    u8 temp = 0;
     for (counter_small = 0; counter_small < size - 1; counter_small++)
     {
         for(counter_big = 0; counter_big < size - 1 - counter_small; counter_big++)

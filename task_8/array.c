@@ -1,7 +1,9 @@
 #include <stdio.h>
-void array_scan_charcter(char arr[] , int size)
+#include "STD_TYPES.h"
+
+void array_scan_charcter(u8 arr[] , u16 size)
 {
-    int counter = 0;
+    u16 counter = 0;
     for (counter = 0; counter < size; counter++)
     {
         printf("Enter character [%d]: ", counter + 1);
@@ -9,9 +11,9 @@ void array_scan_charcter(char arr[] , int size)
     }
 }
 
-void array_scan_int(short int arr[] , int size)
+void array_scan_int(u16 arr[] , u16 size)
 {
-    int counter = 0;
+    u16 counter = 0;
     for (counter = 0; counter < size; counter++)
     {
         printf("Enter number [%d]: ", counter + 1);
@@ -19,9 +21,9 @@ void array_scan_int(short int arr[] , int size)
     }
 }
 
-void display_array_charter(char arr[] , int size)
+void display_array_charter(u8 arr[] , u16 size)
 {
-    int counter = 0;
+    u16 counter = 0;
     for (counter = 0; counter < size; counter++)
     {
         printf("character[%d]: %c\n", counter, arr[counter]);
@@ -29,9 +31,9 @@ void display_array_charter(char arr[] , int size)
     printf("\n");
 }
 
-void display_array_int(short int arr[] , int size)
+void display_array_int(u16 arr[] , u16 size)
 {
-    int counter = 0;
+    u16 counter = 0;
     for (counter = 0; counter < size; counter++)
     {
         printf("number[%d]: %hd\n", counter, arr[counter]);
