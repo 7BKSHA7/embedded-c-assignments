@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <util/delay.h>
+
 #include "Segment_Interface.h"
 #include "Segment_Private.h"
 #include "Segment_config.h"
@@ -12,19 +13,27 @@
 void Segment_Init(uint8_t GroupName){
 
     switch(GroupName){
-        case groupA: 
-            DDRA_Reg=high;
+        case groupA:
+            DDRA_Reg=0xFF;
+            DDRB_Reg=0xFF;
             break;
-        case groupB:   
-            DDRB_Reg=high; 
+
+        case groupB: 
+            DDRB_Reg=0xFF;
+            DDRC_Reg=0xFF; 
             break;
+
         case groupC: 
-            DDRC_Reg=high; 
+            DDRC_Reg=0xFF;
+            DDRD_Reg=0xFF; 
             break;
+
         case groupD: 
-            DDRD_Reg=high; 
+            DDRD_Reg=0xFF;
+            DDRA_Reg=0xFF; 
             break;
     }
+
 }
 
 void DisplayNumber(uint8_t GroupName,uint8_t Number){
@@ -41,19 +50,29 @@ void DisplayNumber(uint8_t GroupName,uint8_t Number){
         Cathode_eight  ,
         Cathode_nine   ,
     };
+
+    uint8_t tens_number = Number/10;
+    uint8_t ones_number = Number%10;
     
     switch(GroupName){
         case groupA: 
-            PORTA_Reg=number[Number]; 
+            PORTA_Reg=number[tens_number];
+            PORTB_Reg=number[ones_number]; 
             break;
+        
         case groupB: 
-            PORTB_Reg=number[Number]; 
+            PORTB_Reg=number[tens_number];
+            PORTC_Reg=number[ones_number]; 
             break;
+
         case groupC: 
-            PORTC_Reg=number[Number]; 
+            PORTC_Reg=number[tens_number];
+            PORTD_Reg=number[ones_number]; 
             break;
+
         case groupD: 
-            PORTD_Reg=number[Number]; 
+            PORTD_Reg=number[tens_number];
+            PORTA_Reg=number[ones_number]; 
             break;
     }
 
