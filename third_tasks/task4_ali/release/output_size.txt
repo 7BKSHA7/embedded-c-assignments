@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+    506	      0	      0	    506	    1fa	C:\Users\beshoy\Desktop\embeded\tasks embeded\Fourth_tasks-Task4_Alii\release\output.elf

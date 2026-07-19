@@ -1,0 +1,356 @@
+
+C:\Users\beshoy\Desktop\embeded\tasks embeded\Fourth_tasks-Task4_Alii\release\output.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001fa  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000001fa  0000026e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  0000026e  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002a0  2**2
+                  CONTENTS, READONLY, OCTETS
+  4 .debug_info   000004e6  00000000  00000000  000002dc  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_abbrev 000004a3  00000000  00000000  000007c2  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_line   0000001d  00000000  00000000  00000c65  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_str    00000196  00000000  00000000  00000c82  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 bc 00 	call	0x178	; 0x178 <main>
+  64:	0c 94 fb 00 	jmp	0x1f6	; 0x1f6 <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <DIO_vSetPortDirection>:
+  6c:	82 30       	cpi	r24, 0x02	; 2
+  6e:	49 f0       	breq	.+18     	; 0x82 <.L2>
+  70:	20 f4       	brcc	.+8      	; 0x7a <.L3>
+  72:	81 15       	cp	r24, r1
+  74:	41 f0       	breq	.+16     	; 0x86 <.L10>
+  76:	67 bb       	out	0x17, r22	; 23
+  78:	08 95       	ret
+
+0000007a <.L3>:
+  7a:	83 30       	cpi	r24, 0x03	; 3
+  7c:	31 f4       	brne	.+12     	; 0x8a <.L11>
+  7e:	61 bb       	out	0x11, r22	; 17
+  80:	08 95       	ret
+
+00000082 <.L2>:
+  82:	64 bb       	out	0x14, r22	; 20
+  84:	08 95       	ret
+
+00000086 <.L10>:
+  86:	6a bb       	out	0x1a, r22	; 26
+  88:	08 95       	ret
+
+0000008a <.L11>:
+  8a:	08 95       	ret
+
+0000008c <DIO_vSetPortValue>:
+  8c:	82 30       	cpi	r24, 0x02	; 2
+  8e:	49 f0       	breq	.+18     	; 0xa2 <.L13>
+  90:	20 f4       	brcc	.+8      	; 0x9a <.L14>
+  92:	81 15       	cp	r24, r1
+  94:	41 f0       	breq	.+16     	; 0xa6 <.L20>
+  96:	68 bb       	out	0x18, r22	; 24
+  98:	08 95       	ret
+
+0000009a <.L14>:
+  9a:	83 30       	cpi	r24, 0x03	; 3
+  9c:	31 f4       	brne	.+12     	; 0xaa <.L21>
+  9e:	62 bb       	out	0x12, r22	; 18
+  a0:	08 95       	ret
+
+000000a2 <.L13>:
+  a2:	65 bb       	out	0x15, r22	; 21
+  a4:	08 95       	ret
+
+000000a6 <.L20>:
+  a6:	6b bb       	out	0x1b, r22	; 27
+  a8:	08 95       	ret
+
+000000aa <.L21>:
+  aa:	08 95       	ret
+
+000000ac <DIO_vSetPinValue>:
+  ac:	41 30       	cpi	r20, 0x01	; 1
+  ae:	79 f0       	breq	.+30     	; 0xce <.L37>
+  b0:	82 30       	cpi	r24, 0x02	; 2
+  b2:	e1 f1       	breq	.+120    	; 0x12c <.L30>
+  b4:	d0 f4       	brcc	.+52     	; 0xea <.L31>
+  b6:	81 15       	cp	r24, r1
+  b8:	21 f1       	breq	.+72     	; 0x102 <.L38>
+  ba:	28 b3       	in	r18, 0x18	; 24
+  bc:	81 e0       	ldi	r24, 0x01	; 1
+  be:	01 c0       	rjmp	.+2      	; 0xc2 <.L2^B1>
+
+000000c0 <.L1^B1>:
+  c0:	88 0f       	add	r24, r24
+
+000000c2 <.L2^B1>:
+  c2:	6a 95       	dec	r22
+  c4:	ea f7       	brpl	.-6      	; 0xc0 <.L1^B1>
+  c6:	80 95       	com	r24
+  c8:	82 23       	and	r24, r18
+  ca:	88 bb       	out	0x18, r24	; 24
+  cc:	08 95       	ret
+
+000000ce <.L37>:
+  ce:	82 30       	cpi	r24, 0x02	; 2
+  d0:	b9 f1       	breq	.+110    	; 0x140 <.L24>
+  d2:	08 f5       	brcc	.+66     	; 0x116 <.L25>
+  d4:	81 15       	cp	r24, r1
+  d6:	e9 f1       	breq	.+122    	; 0x152 <.L39>
+  d8:	88 b3       	in	r24, 0x18	; 24
+  da:	21 e0       	ldi	r18, 0x01	; 1
+  dc:	01 c0       	rjmp	.+2      	; 0xe0 <.L2^B2>
+
+000000de <.L1^B2>:
+  de:	22 0f       	add	r18, r18
+
+000000e0 <.L2^B2>:
+  e0:	6a 95       	dec	r22
+  e2:	ea f7       	brpl	.-6      	; 0xde <.L1^B2>
+  e4:	82 2b       	or	r24, r18
+  e6:	88 bb       	out	0x18, r24	; 24
+  e8:	08 95       	ret
+
+000000ea <.L31>:
+  ea:	83 30       	cpi	r24, 0x03	; 3
+  ec:	d9 f5       	brne	.+118    	; 0x164 <.L40>
+  ee:	22 b3       	in	r18, 0x12	; 18
+  f0:	81 e0       	ldi	r24, 0x01	; 1
+  f2:	01 c0       	rjmp	.+2      	; 0xf6 <.L2^B3>
+
+000000f4 <.L1^B3>:
+  f4:	88 0f       	add	r24, r24
+
+000000f6 <.L2^B3>:
+  f6:	6a 95       	dec	r22
+  f8:	ea f7       	brpl	.-6      	; 0xf4 <.L1^B3>
+  fa:	80 95       	com	r24
+  fc:	82 23       	and	r24, r18
+  fe:	82 bb       	out	0x12, r24	; 18
+ 100:	08 95       	ret
+
+00000102 <.L38>:
+ 102:	2b b3       	in	r18, 0x1b	; 27
+ 104:	81 e0       	ldi	r24, 0x01	; 1
+ 106:	01 c0       	rjmp	.+2      	; 0x10a <.L2^B4>
+
+00000108 <.L1^B4>:
+ 108:	88 0f       	add	r24, r24
+
+0000010a <.L2^B4>:
+ 10a:	6a 95       	dec	r22
+ 10c:	ea f7       	brpl	.-6      	; 0x108 <.L1^B4>
+ 10e:	80 95       	com	r24
+ 110:	82 23       	and	r24, r18
+ 112:	8b bb       	out	0x1b, r24	; 27
+ 114:	08 95       	ret
+
+00000116 <.L25>:
+ 116:	83 30       	cpi	r24, 0x03	; 3
+ 118:	31 f5       	brne	.+76     	; 0x166 <.L41>
+ 11a:	82 b3       	in	r24, 0x12	; 18
+ 11c:	21 e0       	ldi	r18, 0x01	; 1
+ 11e:	01 c0       	rjmp	.+2      	; 0x122 <.L2^B5>
+
+00000120 <.L1^B5>:
+ 120:	22 0f       	add	r18, r18
+
+00000122 <.L2^B5>:
+ 122:	6a 95       	dec	r22
+ 124:	ea f7       	brpl	.-6      	; 0x120 <.L1^B5>
+ 126:	82 2b       	or	r24, r18
+ 128:	82 bb       	out	0x12, r24	; 18
+ 12a:	08 95       	ret
+
+0000012c <.L30>:
+ 12c:	25 b3       	in	r18, 0x15	; 21
+ 12e:	81 e0       	ldi	r24, 0x01	; 1
+ 130:	01 c0       	rjmp	.+2      	; 0x134 <.L2^B6>
+
+00000132 <.L1^B6>:
+ 132:	88 0f       	add	r24, r24
+
+00000134 <.L2^B6>:
+ 134:	6a 95       	dec	r22
+ 136:	ea f7       	brpl	.-6      	; 0x132 <.L1^B6>
+ 138:	80 95       	com	r24
+ 13a:	82 23       	and	r24, r18
+ 13c:	85 bb       	out	0x15, r24	; 21
+ 13e:	08 95       	ret
+
+00000140 <.L24>:
+ 140:	85 b3       	in	r24, 0x15	; 21
+ 142:	21 e0       	ldi	r18, 0x01	; 1
+ 144:	01 c0       	rjmp	.+2      	; 0x148 <.L2^B7>
+
+00000146 <.L1^B7>:
+ 146:	22 0f       	add	r18, r18
+
+00000148 <.L2^B7>:
+ 148:	6a 95       	dec	r22
+ 14a:	ea f7       	brpl	.-6      	; 0x146 <.L1^B7>
+ 14c:	82 2b       	or	r24, r18
+ 14e:	85 bb       	out	0x15, r24	; 21
+ 150:	08 95       	ret
+
+00000152 <.L39>:
+ 152:	8b b3       	in	r24, 0x1b	; 27
+ 154:	21 e0       	ldi	r18, 0x01	; 1
+ 156:	01 c0       	rjmp	.+2      	; 0x15a <.L2^B8>
+
+00000158 <.L1^B8>:
+ 158:	22 0f       	add	r18, r18
+
+0000015a <.L2^B8>:
+ 15a:	6a 95       	dec	r22
+ 15c:	ea f7       	brpl	.-6      	; 0x158 <.L1^B8>
+ 15e:	82 2b       	or	r24, r18
+ 160:	8b bb       	out	0x1b, r24	; 27
+ 162:	08 95       	ret
+
+00000164 <.L40>:
+ 164:	08 95       	ret
+
+00000166 <.L41>:
+ 166:	08 95       	ret
+
+00000168 <LED_vInitializePort>:
+ 168:	6f ef       	ldi	r22, 0xFF	; 255
+ 16a:	0c 94 36 00 	jmp	0x6c	; 0x6c <DIO_vSetPortDirection>
+
+0000016e <LED_vTurnOffPin>:
+ 16e:	40 e0       	ldi	r20, 0x00	; 0
+ 170:	0c 94 56 00 	jmp	0xac	; 0xac <DIO_vSetPinValue>
+
+00000174 <LED_vSetPortPattern>:
+ 174:	0c 94 46 00 	jmp	0x8c	; 0x8c <DIO_vSetPortValue>
+
+00000178 <main>:
+ 178:	80 e0       	ldi	r24, 0x00	; 0
+ 17a:	0e 94 b4 00 	call	0x168	; 0x168 <LED_vInitializePort>
+
+0000017e <.L4>:
+ 17e:	6f ef       	ldi	r22, 0xFF	; 255
+ 180:	80 e0       	ldi	r24, 0x00	; 0
+ 182:	0e 94 ba 00 	call	0x174	; 0x174 <LED_vSetPortPattern>
+ 186:	2f ef       	ldi	r18, 0xFF	; 255
+ 188:	83 ed       	ldi	r24, 0xD3	; 211
+ 18a:	90 e3       	ldi	r25, 0x30	; 48
+
+0000018c <.L1^B1>:
+ 18c:	21 50       	subi	r18, 0x01	; 1
+ 18e:	80 40       	sbci	r24, 0x00	; 0
+ 190:	90 40       	sbci	r25, 0x00	; 0
+ 192:	e1 f7       	brne	.-8      	; 0x18c <.L1^B1>
+ 194:	00 c0       	rjmp	.+0      	; 0x196 <L0^A>
+
+00000196 <L0^A>:
+ 196:	00 00       	nop
+ 198:	c0 e0       	ldi	r28, 0x00	; 0
+
+0000019a <.L2>:
+ 19a:	6c 2f       	mov	r22, r28
+ 19c:	80 e0       	ldi	r24, 0x00	; 0
+ 19e:	0e 94 b7 00 	call	0x16e	; 0x16e <LED_vTurnOffPin>
+ 1a2:	2f ef       	ldi	r18, 0xFF	; 255
+ 1a4:	89 e6       	ldi	r24, 0x69	; 105
+ 1a6:	98 e1       	ldi	r25, 0x18	; 24
+
+000001a8 <.L1^B2>:
+ 1a8:	21 50       	subi	r18, 0x01	; 1
+ 1aa:	80 40       	sbci	r24, 0x00	; 0
+ 1ac:	90 40       	sbci	r25, 0x00	; 0
+ 1ae:	e1 f7       	brne	.-8      	; 0x1a8 <.L1^B2>
+ 1b0:	00 c0       	rjmp	.+0      	; 0x1b2 <L0^A>
+
+000001b2 <L0^A>:
+ 1b2:	00 00       	nop
+ 1b4:	cf 5f       	subi	r28, 0xFF	; 255
+ 1b6:	c8 30       	cpi	r28, 0x08	; 8
+ 1b8:	81 f7       	brne	.-32     	; 0x19a <.L2>
+ 1ba:	c5 e0       	ldi	r28, 0x05	; 5
+
+000001bc <.L3>:
+ 1bc:	6f ef       	ldi	r22, 0xFF	; 255
+ 1be:	80 e0       	ldi	r24, 0x00	; 0
+ 1c0:	0e 94 ba 00 	call	0x174	; 0x174 <LED_vSetPortPattern>
+ 1c4:	2f ef       	ldi	r18, 0xFF	; 255
+ 1c6:	84 e3       	ldi	r24, 0x34	; 52
+ 1c8:	9c e0       	ldi	r25, 0x0C	; 12
+
+000001ca <.L1^B3>:
+ 1ca:	21 50       	subi	r18, 0x01	; 1
+ 1cc:	80 40       	sbci	r24, 0x00	; 0
+ 1ce:	90 40       	sbci	r25, 0x00	; 0
+ 1d0:	e1 f7       	brne	.-8      	; 0x1ca <.L1^B3>
+ 1d2:	00 c0       	rjmp	.+0      	; 0x1d4 <L0^A>
+
+000001d4 <L0^A>:
+ 1d4:	00 00       	nop
+ 1d6:	60 e0       	ldi	r22, 0x00	; 0
+ 1d8:	80 e0       	ldi	r24, 0x00	; 0
+ 1da:	0e 94 ba 00 	call	0x174	; 0x174 <LED_vSetPortPattern>
+ 1de:	2f ef       	ldi	r18, 0xFF	; 255
+ 1e0:	84 e3       	ldi	r24, 0x34	; 52
+ 1e2:	9c e0       	ldi	r25, 0x0C	; 12
+
+000001e4 <.L1^B4>:
+ 1e4:	21 50       	subi	r18, 0x01	; 1
+ 1e6:	80 40       	sbci	r24, 0x00	; 0
+ 1e8:	90 40       	sbci	r25, 0x00	; 0
+ 1ea:	e1 f7       	brne	.-8      	; 0x1e4 <.L1^B4>
+ 1ec:	00 c0       	rjmp	.+0      	; 0x1ee <L0^A>
+
+000001ee <L0^A>:
+ 1ee:	00 00       	nop
+ 1f0:	c1 50       	subi	r28, 0x01	; 1
+ 1f2:	21 f7       	brne	.-56     	; 0x1bc <.L3>
+ 1f4:	c4 cf       	rjmp	.-120    	; 0x17e <.L4>
+
+000001f6 <_exit>:
+ 1f6:	f8 94       	cli
+
+000001f8 <__stop_program>:
+ 1f8:	ff cf       	rjmp	.-2      	; 0x1f8 <__stop_program>
