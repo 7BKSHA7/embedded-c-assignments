@@ -1,2 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-    130	      0	      0	    130	     82	C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\Task3_rohem\release\output.elf

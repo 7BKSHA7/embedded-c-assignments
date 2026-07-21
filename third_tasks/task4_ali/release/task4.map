@@ -2,8 +2,6 @@ Archive member included to satisfy reference by file (symbol)
 
 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
                               C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o (exit)
-C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
-                              C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o (__do_copy_data)
 
 There are no discarded input sections
 
@@ -22,8 +20,9 @@ user_signatures  0x00850000         0x00000400         rw!x
 Linker script and memory map
 
 LOAD C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
-LOAD C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
-LOAD C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
+LOAD C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\DIO\DIO_program.c.o
+LOAD C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\LED\Led_Program.c.o
+LOAD C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
 START GROUP
 LOAD C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a
 LOAD C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5\libm.a
@@ -130,7 +129,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x1d4
+.text           0x00000000      0x1fa
  *(.vectors)
  .vectors       0x00000000       0x54 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -169,8 +168,6 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000060       0x16 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
-                0x00000060                __do_copy_data
  *(.init4)
  *(.init5)
  *(.init5)
@@ -181,73 +178,63 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000076        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+ .init9         0x00000060        0x8 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
  *(.init9)
  *(.text)
- .text          0x0000007e        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
-                0x0000007e                __vector_1
-                0x0000007e                __vector_12
-                0x0000007e                __bad_interrupt
-                0x0000007e                __vector_6
-                0x0000007e                __vector_3
-                0x0000007e                __vector_11
-                0x0000007e                __vector_13
-                0x0000007e                __vector_17
-                0x0000007e                __vector_19
-                0x0000007e                __vector_7
-                0x0000007e                __vector_5
-                0x0000007e                __vector_4
-                0x0000007e                __vector_9
-                0x0000007e                __vector_2
-                0x0000007e                __vector_15
-                0x0000007e                __vector_8
-                0x0000007e                __vector_14
-                0x0000007e                __vector_10
-                0x0000007e                __vector_16
-                0x0000007e                __vector_18
-                0x0000007e                __vector_20
- .text          0x00000082        0x0 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
- .text          0x00000082      0x13e C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
-                0x00000082                Segment_Init
-                0x000000aa                DisplayNumber
-                0x00000126                DisplayRang
- .text          0x000001c0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text          0x000001c0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
-                0x000001c0                        . = ALIGN (0x2)
+ .text          0x00000068        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+                0x00000068                __vector_1
+                0x00000068                __vector_12
+                0x00000068                __bad_interrupt
+                0x00000068                __vector_6
+                0x00000068                __vector_3
+                0x00000068                __vector_11
+                0x00000068                __vector_13
+                0x00000068                __vector_17
+                0x00000068                __vector_19
+                0x00000068                __vector_7
+                0x00000068                __vector_5
+                0x00000068                __vector_4
+                0x00000068                __vector_9
+                0x00000068                __vector_2
+                0x00000068                __vector_15
+                0x00000068                __vector_8
+                0x00000068                __vector_14
+                0x00000068                __vector_10
+                0x00000068                __vector_16
+                0x00000068                __vector_18
+                0x00000068                __vector_20
+ .text          0x0000006c       0xfc C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\DIO\DIO_program.c.o
+                0x0000006c                DIO_vSetPortDirection
+                0x0000008c                DIO_vSetPortValue
+                0x000000ac                DIO_vSetPinValue
+ .text          0x00000168       0x10 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\LED\Led_Program.c.o
+                0x00000168                LED_vInitializePort
+                0x0000016e                LED_vTurnOffPin
+                0x00000174                LED_vSetPortPattern
+ .text          0x00000178        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
+ .text          0x00000178        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x00000178                        . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x000001c0       0x10 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
-                0x000001c0                main
+ .text.startup  0x00000178       0x7e C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
+                0x00000178                main
  .text.libgcc.mul
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .text.libgcc.mul
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc.div
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc.prologue
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc.builtins
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc.fmul
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc.fixed
-                0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
-                0x000001d0                        . = ALIGN (0x2)
+                0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000001d0        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
-                0x000001d0                _exit
-                0x000001d0                exit
+ .fini9         0x000001f6        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+                0x000001f6                _exit
+                0x000001f6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -266,55 +253,52 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000001d0        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000001f6        0x4 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x000001d4                        . = ALIGN (0x2)
+                0x000001fa                        . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x000001d4                        _etext = .
+                0x000001fa                        _etext = .
 
-.data           0x00800060        0xc load address 0x000001d4
-                0x00800060                        PROVIDE (__data_start = .)
+.data           0x00800060        0x0 load address 0x000001fa
+                [!provide]                        PROVIDE (__data_start = .)
  *(.data)
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
- .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
- .data          0x00800060        0x0 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
+ .data          0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\DIO\DIO_program.c.o
+ .data          0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\LED\Led_Program.c.o
+ .data          0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
  .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .data          0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
  *(.data*)
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
- .rodata.str1.1
-                0x00800060        0xb C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
  *(.gnu.linkonce.r*)
-                0x0080006c                        . = ALIGN (0x2)
- *fill*         0x0080006b        0x1 
-                0x0080006c                        _edata = .
-                0x0080006c                        PROVIDE (__data_end = .)
+                0x00800060                        . = ALIGN (0x2)
+                0x00800060                        _edata = .
+                [!provide]                        PROVIDE (__data_end = .)
 
-.bss            0x0080006c        0x0
+.bss            0x00800060        0x0
                 [!provide]                        PROVIDE (__bss_start = .)
  *(.bss)
- .bss           0x0080006c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
- .bss           0x0080006c        0x0 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
- .bss           0x0080006c        0x0 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
- .bss           0x0080006c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
- .bss           0x0080006c        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/../../../../avr/lib/avr5/crtatmega32.o
+ .bss           0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\DIO\DIO_program.c.o
+ .bss           0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\LED\Led_Program.c.o
+ .bss           0x00800060        0x0 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
+ .bss           0x00800060        0x0 C:/avr-toolchain/bin/../lib/gcc/avr/15.1.0/avr5\libgcc.a(_exit.o)
  *(.bss*)
  *(COMMON)
                 [!provide]                        PROVIDE (__bss_end = .)
-                0x000001d4                        __data_load_start = LOADADDR (.data)
-                0x000001e0                        __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000001fa                        __data_load_start = LOADADDR (.data)
+                0x000001fa                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080006c        0x0
+.noinit         0x00800060        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)
  *(.noinit .noinit.* .gnu.linkonce.n.*)
                 [!provide]                        PROVIDE (__noinit_end = .)
-                0x0080006c                        _end = .
+                0x00800060                        _end = .
                 [!provide]                        PROVIDE (__heap_start = .)
                 0x00000000                        __flmap_init_label = DEFINED (__flmap_noinit_start)?__flmap_noinit_start:0x0
                 0x00000000                        __flmap = DEFINED (__flmap)?__flmap:0x0
@@ -355,9 +339,10 @@ END GROUP
 
 .comment        0x00000000       0x2f
  *(.comment)
- .comment       0x00000000       0x2f C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\main.c.o
+ .comment       0x00000000       0x2f C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\DIO\DIO_program.c.o
                                  0x30 (size before relaxing)
- .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\Segment\Segment_Program.c.o
+ .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\LED\Led_Program.c.o
+ .comment       0x0000002f       0x30 C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\main.c.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c
@@ -454,5 +439,5 @@ END GROUP
 
 .debug_sup
  *(.debug_sup)
-OUTPUT(C:\Users\beshoy\Desktop\embeded\tasks embeded\Assignment_3\release\output.elf elf32-avr)
+OUTPUT(C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\task4.elf elf32-avr)
 LOAD linker stubs

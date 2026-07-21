@@ -1,2 +1,0 @@
-   text	   data	    bss	    dec	    hex	filename
-    538	      0	      0	    538	    21a	C:\Users\beshoy\Desktop\embeded\tasks embeded\Task2 (LED)\release\output.elf

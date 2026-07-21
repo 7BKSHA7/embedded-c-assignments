@@ -1,13 +1,13 @@
 {
-  "projectName": "Assignment_3",
-  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Assignment_3",
-  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Assignment_3",
-  "outputName": "output",
+  "projectName": "Task1_mo3az",
+  "projectPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task1_mo3az",
+  "outputPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task1_mo3az",
+  "outputName": "task1",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
   "languageVersion": "C99",
-  "mcuFrequency": "8",
+  "mcuFrequency": "7",
   "frequencyUnit": "MHz",
   "sourceFiles": [],
   "compilerPath": "",
@@ -25,6 +25,6 @@
   "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Assignment_3/output.hex",
+  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task1_mo3az/task1.hex",
   "programmer": "usbasp"
 }

@@ -1,13 +1,13 @@
 {
-  "projectName": "Task2 (LED)",
-  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Task2 (LED)",
-  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Task2 (LED)",
-  "outputName": "output",
+  "projectName": "task4_ali",
+  "projectPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\task4_ali",
+  "outputPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\task4_ali",
+  "outputName": "task4",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
   "languageVersion": "C99",
-  "mcuFrequency": "5",
+  "mcuFrequency": "7",
   "frequencyUnit": "MHz",
   "sourceFiles": [],
   "compilerPath": "",
@@ -25,6 +25,6 @@
   "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Task2 (LED)/output.hex",
+  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\task4_ali/task4.hex",
   "programmer": "usbasp"
 }

@@ -1,8 +1,8 @@
 {
-  "projectName": "Fourth_tasks-Task4_Alii",
-  "projectPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Fourth_tasks-Task4_Alii",
-  "outputPath": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Fourth_tasks-Task4_Alii",
-  "outputName": "output",
+  "projectName": "Task2_youssef",
+  "projectPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task2_youssef",
+  "outputPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task2_youssef",
+  "outputName": "task2",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
@@ -25,6 +25,6 @@
   "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\embeded\\tasks embeded\\Fourth_tasks-Task4_Alii/output.hex",
+  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task2_youssef/task2.hex",
   "programmer": "usbasp"
 }

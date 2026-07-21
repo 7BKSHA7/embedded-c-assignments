@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+    506	      0	      0	    506	    1fa	C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\task4_ali\release\task4.elf

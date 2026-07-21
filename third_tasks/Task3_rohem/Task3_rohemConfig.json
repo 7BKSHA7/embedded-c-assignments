@@ -2,7 +2,7 @@
   "projectName": "Task3_rohem",
   "projectPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task3_rohem",
   "outputPath": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task3_rohem",
-  "outputName": "output",
+  "outputName": "task3",
   "target": "AVR",
   "mcu": "atmega32",
   "language": "C",
@@ -25,6 +25,6 @@
   "port": "COM5 - Standard Serial over Bluetooth link (COM5)",
   "baudRate": "115200",
   "timeout": "5000",
-  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task3_rohem/output.hex",
+  "firmwareFile": "C:\\Users\\beshoy\\Desktop\\assigements_first_beshoy_esmat\\third_tasks\\Task3_rohem/task3.hex",
   "programmer": "usbasp"
 }

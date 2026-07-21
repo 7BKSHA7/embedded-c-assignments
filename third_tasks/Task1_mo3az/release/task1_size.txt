@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+    468	     12	      0	    480	    1e0	C:\Users\beshoy\Desktop\assigements_first_beshoy_esmat\third_tasks\Task1_mo3az\release\task1.elf
